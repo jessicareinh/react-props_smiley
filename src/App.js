@@ -1,6 +1,20 @@
 import React from "react";
 import "./styles.css";
 
+
+
+function Smiley({ isHappy }) {
+  return (
+    <div>
+      {isHappy ? <span role="img" aria-label="happy">🤠</span> : <span role="img" aria-label="sad">😞</span>}
+    </div>
+  );
+}
+
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return (
+    <div className="App">
+      <Smiley isHappy={true} />
+    </div>
+  );
 }
